@@ -2,9 +2,7 @@
 
 ## Local Setup
 
-### Running from terminal
-
-#### Pre-requisites
+### Pre-requisites
 
 * JDK8
 
@@ -24,9 +22,35 @@ macOS: ./gradlew clean build
 Windows: gradlew clean build
 ```
 
-4. Run the application
+
+### Running Locally
+
+#### Command Line
 
 ```
 macOS: ./gradlew bootRun
 Windows: gradlew bootRun
 ```
+
+#### Docker
+
+##### Build The Image
+
+```
+docker build -t nielsen-scheduler .
+```
+
+##### Run The Image
+
+```
+docker run -p 8080:8080 nielsen-scheduler
+```
+
+#### Docker Compose
+
+##### Build The Image
+
+```
+docker-compose up
+```
+

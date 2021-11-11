@@ -1,5 +1,27 @@
 # nielsen-scheduler
 
+## Project Overview
+
+Appointment scheduling application built in `Spring Boot` with `Spring Data JPA` as the persistence API and `H2` embedded database layer.
+
+### Libraries and frameworks used
+
+* Spring Boot Web
+
+* Spring Security
+
+* Spring Data JPA
+
+* Netty
+
+* H2 Embedded Database
+
+* Lombok
+
+* JUnit
+
+* Docker
+
 ## Local Setup
 
 ### Pre-requisites

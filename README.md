@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Appointment scheduling application built in `Spring Boot` with `Spring Data JPA` as the persistence API and `H2` embedded database layer.
+Appointment scheduling application for a car repair service, built in `Spring Boot` with `Spring Data JPA` as the persistence API and `H2` embedded database layer.
 
 ### Libraries and frameworks used
 

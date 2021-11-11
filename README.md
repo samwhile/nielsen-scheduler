@@ -256,11 +256,15 @@ curl --location --request POST 'http://localhost:8080/appointment' \
 ##### Request
 
 ```
-DELETE /appointment
+DELETE /appointment/{uid}
 ```
 
+| Path Param  | Type          | Required | Example             |
+|-------------|---------------|----------|---------------------|
+| uid         | Long          | Yes      | 123                 |
+
 ```
-curl --location --request DELETE 'http://localhost:8080/appointment'
+curl --location --request DELETE 'http://localhost:8080/appointment/51'
 ```
 
 

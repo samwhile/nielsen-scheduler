@@ -10,7 +10,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.web.server.ResponseStatusException;
@@ -142,8 +141,8 @@ public class AppointmentControllerTest {
         AppointmentFilter appointmentFilter = new AppointmentFilter(
                 startDateTime,
                 endDateTime,
-                Sort.Direction.ASC,
-                AppointmentFilter.SortBy.TOTAL_PRICE);
+                "ASC",
+                "totalPrice");
 
         List<Appointment> appointmentList = appointmentController.getAppointmentsByFilter(appointmentFilter);
 
@@ -162,8 +161,8 @@ public class AppointmentControllerTest {
         AppointmentFilter appointmentFilter = new AppointmentFilter(
                 startDateTime,
                 endDateTime,
-                Sort.Direction.ASC,
-                AppointmentFilter.SortBy.TOTAL_PRICE);
+                "ASC",
+                "totalPrice");
 
         List<Appointment> appointmentList = appointmentController.getAppointmentsByFilter(appointmentFilter);
 

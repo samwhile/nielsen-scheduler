@@ -75,10 +75,11 @@ public class AppointmentServiceImpl implements AppointmentService {
                 throw new IllegalArgumentException("Invalid Start or End date");
             }
 
-            Sort.Direction direction = Optional.ofNullable(appointmentFilter.getOrderBy()).orElse(Sort.Direction.ASC);
-            String sortField = appointmentFilter.getSortBy().getSortField();
+            String direction = Optional.ofNullable(appointmentFilter.getOrderBy()).orElse("ASC");
+            String sortField = Optional.ofNullable(appointmentFilter.getSortBy())
+                    .orElse("totalPrice");
 
-            return appointmentRepository.findAllByDateTimeBetween(startDate,endDate, Sort.by(direction, sortField));
+            return appointmentRepository.findAllByDateTimeBetween(startDate,endDate, Sort.by(Sort.Direction.fromString(direction), sortField));
         }
         return Collections.emptyList();
     }

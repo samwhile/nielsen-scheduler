@@ -1,0 +1,30 @@
+
+scheduler:
+  etl:
+    enabled: true
+    generate:
+      appointments: 10
+      customers: 50
+      services: >
+        Oil Change,
+        Inspection,
+        Tire Rotation,
+        Brakes,
+        AC Service
+      vehicles: >
+        Honda Civic,
+        Toyota Camry,
+        Subaru Forrester,
+        Ford Focus,
+        Nissan Altima
+
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  jpa:
+    database: h2
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop

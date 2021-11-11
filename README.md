@@ -20,6 +20,8 @@ Appointment scheduling application built in `Spring Boot` with `Spring Data JPA`
 
 * JUnit
 
+* Gradle
+
 * Docker
 
 ## Local Setup
